@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewGen Robotics | Online Coding & Tech Classes</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200">
+        <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 lg:px-2 py-3">
+            <div class="flex items-center gap-2">
+                <div
+                    class="h-9 w-9 rounded-xl bg-slate-900 flex items-center justify-center text-white text-lg font-semibold">
+                    N
+                </div>
+                <div>
+                    <p class="font-semibold tracking-tight text-slate-900">NewGen Robotics</p>
+                    <p class="text-xs text-slate-500">Coding • Robotics • Data</p>
+                </div>
+            </div>
+
+            <button id="navToggle"
+                class="md:hidden text-slate-700 border border-slate-300 rounded-lg px-3 py-1 text-sm">
+                Menu
+            </button>
+
+            <ul id="navLinks" class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+                <li><a href="#hero" class="hover:text-slate-900">Home</a></li>
+                <li><a href="#courses" class="hover:text-slate-900">Courses</a></li>
+                <li><a href="#projects" class="hover:text-slate-900">Projects</a></li>
+                <li><a href="#testimonials" class="hover:text-slate-900">Testimonials</a></li>
+                <li><a href="#about" class="hover:text-slate-900">About</a></li>
+                <li><a href="#contact" class="hover:text-slate-900">Contact</a></li>
+                <li>
+                    <a href="#contact"
+                        class="inline-flex items-center rounded-full border border-slate-900 px-4 py-1.5 text-xs font-semibold text-slate-900 hover:bg-slate-900 hover:text-white transition">
+                        Book a Demo
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+            <ul class="max-w-6xl mx-auto px-4 py-3 space-y-2 text-sm text-slate-700">
+                <li><a href="#hero" class="block py-1">Home</a></li>
+                <li><a href="#courses" class="block py-1">Courses</a></li>
+                <li><a href="#projects" class="block py-1">Projects</a></li>
+                <li><a href="#testimonials" class="block py-1">Testimonials</a></li>
+                <li><a href="#about" class="block py-1">About</a></li>
+                <li><a href="#contact" class="block py-1">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="max-w-6xl mx-auto px-4 lg:px-2 pt-10 pb-16 lg:pt-16 lg:pb-24">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+                <p class="text-xs font-semibold tracking-[0.2em] text-slate-500 uppercase mb-3">
+                    Online Coding & Tech Coaching
+                </p>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 mb-4">
+                    Future-ready skills, <span class="text-slate-500">taught simply.</span>
+                </h1>
+                <p class="text-sm sm:text-base text-slate-600 mb-6 max-w-xl">
+                    I teach Computer Science, Python, Arduino, IoT, DSA, Data Analytics & Data Science
+                    through practical, project-based online classes.
+                </p>
+
+                <div class="flex flex-wrap gap-3 items-center mb-6">
+                    <a href="#contact"
+                        class="inline-flex items-center rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-800 transition">
+                        Book a Free Demo
+                    </a>
+                    <a href="#courses"
+                        class="inline-flex items-center rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-800 hover:bg-slate-100 transition">
+                        View Courses
+                    </a>
+                </div>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200 bg-slate-200 p-6 shadow-sm max-w-sm lg:ml-auto">
+                <p class="text-xs font-medium text-black-500 mb-4">Classes</p>
+                <div class="space-y-4 text-sm">
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Mode</span>
+                        <span class="font-medium text-slate-900">Live Online</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Type</span>
+                        <span class="font-medium text-slate-900">1-to-1 / Small Groups</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500 mr-5">Style</span>
+                        <span class="font-medium text-slate-900">Project-based learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-8">
+                Courses & Pricing
+            </h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Course Card Template -->
+                <div class="rounded-2xl border border-slate-200 p-5 bg-slate-100">
+                    <h3 class="font-semibold text-slate-900 text-sm">Computer Science</h3>
+                    <p class="text-xs text-slate-600 mt-1">Learn Computer Insights</p>
+                    <p class="font-semibold text-slate-900 text-sm mt-3">INR 500 • per class</p>
+                    <a href="#contact"
+                        class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                        Enquire
+                    </a>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 p-5 bg-purple-100">
+                    <h3 class="font-semibold text-slate-900 text-sm">Python Programming</h3>
+                    <p class="text-xs text-slate-600 mt-1">Learn Python from basics to projects.</p>
+                    <p class="font-semibold text-slate-900 text-sm mt-3">INR 650 • per class</p>
+                    <a href="#contact"
+                        class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                        Enquire
+                    </a>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 p-5 bg-blue-100">
+                    <h3 class="font-semibold text-slate-900 text-sm">Arduino</h3>
+                    <p class="text-xs text-slate-600 mt-1">Sensors, circuits, motors</p>
+                    <p class="font-semibold text-slate-900 text-sm mt-3">INR 500 • per class</p>
+                    <a href="#contact"
+                        class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                        Enquire
+                    </a>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 p-5 bg-orange-100">
+                    <h3 class="font-semibold text-slate-900 text-sm">Internet of Things</h3>
+                    <p class="text-xs text-slate-600 mt-1">Wifi, bluetooth, Cloud dashboards</p>
+                    <p class="font-semibold text-slate-900 text-sm mt-3">INR 600 • per class</p>
+                    <a href="#contact"
+                        class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                        Enquire
+                    </a>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 p-5 bg-green-100">
+                    <h3 class="font-semibold text-slate-900 text-sm">Data analysis</h3>
+                    <p class="text-xs text-slate-600 mt-1">Excel, Sql, Power Bi/Tablue dashbords</p>
+                    <p class="font-semibold text-slate-900 text-sm mt-3">INR 800 • per class</p>
+                    <a href="#contact"
+                        class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                        Enquire
+                    </a>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 p-5 bg-red-100">
+                    <h3 class="font-semibold text-slate-900 text-sm">Data Science</h3>
+                    <p class="text-xs text-slate-600 mt-1">Python, Pandas, ML Models & Projects.</p>
+                    <p class="font-semibold text-slate-900 text-sm mt-3">INR 1000 • per class</p>
+                    <a href="#contact"
+                        class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                        Enquire
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="border-t border-slate-200 bg-slate-50/50">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-8">
+                Featured Projects
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-5">
+
+                <!-- Project 1 -->
+                <div class="rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <img src="assests/project1.png" class="rounded-xl aspect-video object-cover mb-3"
+                        alt="Smart Irrigation System">
+                    <p class="font-semibold text-slate-900 text-sm">Ultrasonic Radar System</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <img src="assests/project2.png" class="rounded-xl aspect-video object-cover mb-3"
+                        alt="Customer Churn ML Model">
+                    <p class="font-semibold text-slate-900 text-sm">Smart Irrigation System</p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <img src="assests/project3.png" class="rounded-xl aspect-video object-cover mb-3"
+                        alt="Python Automation Projects">
+                    <p class="font-semibold text-slate-900 text-sm">Smoke Alert System</p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <img src="assests/project4.png" class="rounded-xl aspect-video object-cover mb-3"
+                        alt="AI / ML Project">
+                    <p class="font-semibold text-slate-900 text-sm">Weather Station</p>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <img src="assests/project6.JPG" class="rounded-xl aspect-video object-cover mb-3"
+                        alt="Robotics Workshop">
+                    <p class="font-semibold text-slate-900 text-sm">AI Face detection</p>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <img src="assests/project7.png" class="rounded-xl aspect-video object-cover mb-3"
+                        alt="Robotics Workshop">
+                    <p class="font-semibold text-slate-900 text-sm">Hotel booking dashboard</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Offline Activities Gallery -->
+    <section id="activities" class="border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-6">
+                School Activities & Workshops
+            </h2>
+
+            <p class="text-sm text-slate-600 mb-6 max-w-xl">
+                Glimpses from our hands-on STEM, Robotics, and Coding workshops conducted in schools.
+            </p>
+
+            <!-- Scrollable Image Row -->
+            <div id="activitySlider" class="flex gap-4 overflow-x-auto pb-3">
+
+                <!-- IMAGE 1 -->
+                <img src="assests/activity1.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 2 -->
+                <img src="assests/activity2.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 3 -->
+                <img src="assests/activity3.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 4 -->
+                <img src="assests/activity4.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 5 -->
+                <img src="assests/activity5.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 6 -->
+                <img src="assests/activity6.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 7 -->
+                <img src="assests/activity7.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 8 -->
+                <img src="assests/activity8.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 9 -->
+                <img src="assests/activity9.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+                <!-- IMAGE 10 -->
+                <img src="assests/activity10.jpg"
+                    class="min-w-[260px] h-40 rounded-xl object-cover border border-slate-200 shadow-sm"
+                    alt="Activity Image">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-8">
+                Testimonials
+            </h2>
+
+            <div id="testimonialSlider" class="flex gap-4 overflow-x-auto pb-2">
+                <div class="min-w-[260px] rounded-2xl bg-slate-50 border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “My daughter used to fear coding. After just 4–5 classes, she started building small Python
+                        games on her own. The confidence boost is unbelievable!”
+                    </p>
+                    <p class="font-semibold text-slate-900">Neha, UAE</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “The Robotics workshop in our school was the best STEM activity we’ve ever had. Kids were
+                        excited for days!”
+                    </p>
+                    <p class="font-semibold text-slate-900">School Parent</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “Very patient teaching style. My son finally understands logic building and doesn’t copy-paste
+                        code anymore.”
+                    </p>
+                    <p class="font-semibold text-slate-900">Prabal, Australia</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “I appreciate the discipline and structure of the classes. Every session has notes, assignments,
+                        and a clear goal.”
+                    </p>
+                    <p class="font-semibold text-slate-900">Haqim, UAE</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “The IoT project my child built actually works! He showed it in the school exhibition and won
+                        first prize.”
+                    </p>
+                    <p class="font-semibold text-slate-900">Atharv, INDIA</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “Excellent communication and very flexible timing. Perfect for students with busy schedules.”
+                    </p>
+                    <p class="font-semibold text-slate-900">Alexis, USA</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “What I loved is that he doesn’t just teach - he ensures the child truly understands. Highly
+                        recommended!”
+                    </p>
+                    <p class="font-semibold text-slate-900">Neha, UAE</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “My daughter created a functioning robot arm in Level-1 Robotics. Didn’t think she would ever
+                        enjoy electronics!”
+                    </p>
+                    <p class="font-semibold text-slate-900">Rehma, UAE</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “The Data Science bootcamp was extremely well structured. Even as a beginner, I could follow
+                        everything.”
+                    </p>
+                    <p class="font-semibold text-slate-900">Haslifah, UK</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “This is the only place where my child learns AND smiles at the same time. Practical, fun, and
+                        effective teaching”
+                    </p>
+                    <p class="font-semibold text-slate-900">Phalguni, INDIA</p>
+                </div>
+
+                <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
+                    <p class="text-slate-700 mb-3">
+                        “I cleared my interview coding round because of the DSA sessions. The recursion explanation
+                        finally made sense!”
+                    </p>
+                    <p class="font-semibold text-slate-900">Dhruv, USA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Feedback Slider -->
+    <section id="whatsapp" class="border-t border-slate-200 bg-slate-50/60">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-3">
+                WhatsApp Feedback from Parents
+            </h2>
+            <p class="text-sm text-slate-600 mb-6 max-w-xl">
+                A few real messages from parents after classes and workshops.
+            </p>
+
+            <div id="whatsappSlider" class="flex gap-4 overflow-x-auto pb-3 snap-x snap-mandatory">
+
+                <!-- Slide 1 -->
+                <div
+                    class="wa-card min-w-[260px] max-w-xs snap-start rounded-2xl bg-white border border-slate-200 shadow-sm p-2">
+                    <img src="assests/wa1.jpg" alt="Parent WhatsApp feedback 1" class="w-full rounded-xl object-cover">
+                </div>
+
+                <!-- Slide 2 -->
+                <div
+                    class="wa-card min-w-[260px] max-w-xs snap-start rounded-2xl bg-white border border-slate-200 shadow-sm p-2">
+                    <img src="assests/wa2.jpg" alt="Parent WhatsApp feedback 2" class="w-full rounded-xl object-cover">
+                </div>
+
+                <!-- Slide 3 -->
+                <div
+                    class="wa-card min-w-[260px] max-w-xs snap-start rounded-2xl bg-white border border-slate-200 shadow-sm p-2">
+                    <img src="assests/wa3.jpg" alt="Parent WhatsApp feedback 3" class="w-full rounded-xl object-cover">
+                </div>
+
+                <!-- Slide 4 -->
+                <div
+                    class="wa-card min-w-[260px] max-w-xs snap-start rounded-2xl bg-white border border-slate-200 shadow-sm p-2">
+                    <img src="assests/wa4.jpg" alt="Parent WhatsApp feedback 4" class="w-full rounded-xl object-cover">
+                </div>
+
+                <!-- Slide 5 -->
+                <div
+                    class="wa-card min-w-[260px] max-w-xs snap-start rounded-2xl bg-white border border-slate-200 shadow-sm p-2">
+                    <img src="assests/wa5.jpg" alt="Parent WhatsApp feedback 5" class="w-full rounded-xl object-cover">
+                </div>
+
+                <!-- Add more cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="border-t border-slate-200 bg-slate-50/70">
+        <div class="max-w-6xl mx-auto px-4 lg:px-2 py-14 lg:py-16">
+
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+                <!-- Left: Instructor Image -->
+                <div class="flex justify-center opacity-0 translate-y-6 transition-all duration-700 about-animate">
+                    <img src="assests/instructor.jpg" alt="Instructor Photo"
+                        class="rounded-3xl shadow-lg border border-slate-200 w-full max-w-sm object-cover">
+                </div>
+
+                <!-- Right: About Text -->
+                <div class="opacity-0 translate-y-6 transition-all duration-700 delay-200 about-animate">
+                    <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-4">
+                        About the Instructor
+                    </h2>
+
+                    <p class="text-sm text-slate-600 mb-3">
+                        Hi! I'm Monty, an educator specializing in Robotics, Python, IoT,
+                        Data Science, and Computer Science fundamentals. I focus on simplifying
+                        complex concepts through real-world examples and hands-on projects.
+                    </p>
+
+                    <p class="text-sm text-slate-600 mb-3">
+                        Over the years, I’ve trained 100+ students - from school kids building their
+                        first robot, to college students preparing for interviews, to professionals
+                        transitioning into tech.
+                    </p>
+
+                    <p class="text-sm text-slate-600 mb-5">
+                        My teaching approach is practical, friendly, and structured so that every
+                        student builds something meaningful and gains long-term confidence.
+                    </p>
+
+                    <!-- Stats Boxes -->
+                    <div
+                        class="grid sm:grid-cols-3 gap-4 text-xs opacity-0 translate-y-6 transition-all duration-700 delay-300 about-animate">
+                        <div class="rounded-2xl bg-white border border-slate-200 p-3">
+                            <p class="text-slate-500">Students Trained</p>
+                            <p class="text-lg font-semibold text-slate-900">100+</p>
+                        </div>
+                        <div class="rounded-2xl bg-white border border-slate-200 p-3">
+                            <p class="text-slate-500">Experience</p>
+                            <p class="text-lg font-semibold text-slate-900">5+ years</p>
+                        </div>
+                        <div class="rounded-2xl bg-white border border-slate-200 p-3">
+                            <p class="text-slate-500">Teaching Style</p>
+                            <p class="text-lg font-semibold text-slate-900">Project-based</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-14">
+
+            <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-4">
+                Contact
+            </h2>
+
+            <p class="text-sm text-slate-600 mb-5">
+                Reach out for demo classes or course enquiries:
+            </p>
+
+            <p class="text-sm mb-2">
+                <strong>Email:</strong>
+                <a href="mailto:newgenrobotics72@gmail.com" class="underline text-slate-700">
+                    newgenrobotics72@gmail.com
+                </a>
+            </p>
+
+            <p class="text-sm">
+                <strong>WhatsApp:</strong>
+                <a href="https://wa.me/919971475942" target="_blank" class="underline text-slate-700">
+                    +91 9971475942
+                </a>
+            </p>
+
+            <!-- Social Icons -->
+            <div class="mt-8">
+                <p class="text-xs uppercase tracking-[0.2em] text-slate-500 mb-3">Social</p>
+
+                <div class="flex gap-5 text-2xl text-slate-500">
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/newgenrobotics" target="_blank"
+                        class="hover:text-blue-600 transition" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@newgenrobotics" target="_blank"
+                        class="hover:text-red-600 transition" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/newgenrobotics/" target="_blank"
+                        class="hover:text-pink-500 transition" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <!-- Twitter / X -->
+                    <a href="https://x.com/newgen_robotics" target="_blank" class="hover:text-black transition"
+                        aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-slate-50 text-center py-4">
+        <p class="text-xs text-slate-500">
+            © <span id="year"></span> NewGen Robotics. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
