@@ -91,4 +91,3 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 aboutElements.forEach(el => observer.observe(el));
-
