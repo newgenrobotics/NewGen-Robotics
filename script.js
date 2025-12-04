@@ -91,3 +91,21 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 aboutElements.forEach(el => observer.observe(el));
+
+// Currency Toggle
+const toggle = document.getElementById("currencyToggle");
+
+toggle.addEventListener("change", () => {
+  const inrPrices = document.querySelectorAll(".price-inr");
+  const usdPrices = document.querySelectorAll(".price-usd");
+
+  if (toggle.checked) {
+    // Show USD
+    inrPrices.forEach(el => el.classList.add("hidden"));
+    usdPrices.forEach(el => el.classList.remove("hidden"));
+  } else {
+    // Show INR
+    inrPrices.forEach(el => el.classList.remove("hidden"));
+    usdPrices.forEach(el => el.classList.add("hidden"));
+  }
+});

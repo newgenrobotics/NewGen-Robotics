@@ -124,82 +124,138 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Courses -->
     <section id="courses" class="border-t border-slate-200 bg-white">
         <div class="max-w-6xl mx-auto px-4 py-14">
             <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-8">
                 Courses & Pricing
             </h2>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-sm font-medium text-slate-600">INR</span>
+
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="currencyToggle" class="sr-only peer">
+                    <div class="w-12 h-6 bg-slate-300 peer-focus:outline-none rounded-full 
+                peer peer-checked:bg-slate-900 transition"></div>
+                    <div class="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full transition 
+                peer-checked:translate-x-6 shadow">
+                    </div>
+                </label>
+
+                <span class="text-sm font-medium text-slate-600">USD</span>
+            </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- Course Card Template -->
+                <!-- CS Fundamentals -->
                 <div class="rounded-2xl border border-slate-200 p-5 bg-slate-100">
-                    <h3 class="font-semibold text-slate-900 text-sm">CS Fundametals</h3>
+                    <h3 class="font-semibold text-slate-900 text-sm">CS Fundamentals</h3>
                     <p class="text-xs text-slate-600 mt-1">Learn Computer Insights</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">INR (23,000 - 27,000) • 50 classes</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">USD (750 - 899) • 50 classes</p>
+
+                    <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                        INR (23,000 - 27,000) • 50 classes
+                    </p>
+                    <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                        USD (750 - 899) • 50 classes
+                    </p>
+
                     <a href="#contact"
                         class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
                         Enquire
                     </a>
                 </div>
 
+                <!-- Arduino -->
                 <div class="rounded-2xl border border-slate-200 p-5 bg-blue-100">
                     <h3 class="font-semibold text-slate-900 text-sm">Arduino</h3>
                     <p class="text-xs text-slate-600 mt-1">Sensors, circuits, motors</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">INR (16,800 - 18,500) • 36 classes</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">USD (549 - 649) • 36 classes</p>
+
+                    <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                        INR (16,800 - 18,500) • 36 classes
+                    </p>
+                    <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                        USD (549 - 649) • 36 classes
+                    </p>
+
                     <a href="#contact"
                         class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
                         Enquire
                     </a>
                 </div>
 
+                <!-- IoT -->
                 <div class="rounded-2xl border border-slate-200 p-5 bg-orange-100">
                     <h3 class="font-semibold text-slate-900 text-sm">Internet of Things</h3>
                     <p class="text-xs text-slate-600 mt-1">Wifi, bluetooth, Cloud dashboards</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">INR (20,000 - 25,000) • 36 classes</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">USD (579 - 699) • 36 classes</p>
+
+                    <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                        INR (20,000 - 25,000) • 36 classes
+                    </p>
+                    <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                        USD (579 - 699) • 36 classes
+                    </p>
+
                     <a href="#contact"
                         class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
                         Enquire
                     </a>
                 </div>
 
+                <!-- Python -->
                 <div class="rounded-2xl border border-slate-200 p-5 bg-purple-100">
                     <h3 class="font-semibold text-slate-900 text-sm">Python Programming</h3>
                     <p class="text-xs text-slate-600 mt-1">Learn Python from basics to projects.</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">INR (59,999 - 64,999) • 100 classes</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">USD (1999 - 2199) • 100 classes</p>
+
+                    <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                        INR (59,999 - 64,999) • 100 classes
+                    </p>
+                    <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                        USD (1999 - 2199) • 100 classes
+                    </p>
+
                     <a href="#contact"
                         class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
                         Enquire
                     </a>
                 </div>
 
+                <!-- Data Analysis -->
                 <div class="rounded-2xl border border-slate-200 p-5 bg-green-100">
-                    <h3 class="font-semibold text-slate-900 text-sm">Data analysis</h3>
-                    <p class="text-xs text-slate-600 mt-1">Excel, Sql, Power Bi/Tablue dashbords</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">INR (36,000 - 40,000) • 50 classes</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">USD (999 - 1250) • 50 classes</p>
+                    <h3 class="font-semibold text-slate-900 text-sm">Data Analysis</h3>
+                    <p class="text-xs text-slate-600 mt-1">Excel, SQL, Power BI / Tableau dashboards</p>
+
+                    <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                        INR (36,000 - 40,000) • 50 classes
+                    </p>
+                    <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                        USD (999 - 1250) • 50 classes
+                    </p>
+
                     <a href="#contact"
                         class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
                         Enquire
                     </a>
                 </div>
 
+                <!-- Data Science -->
                 <div class="rounded-2xl border border-slate-200 p-5 bg-red-100">
                     <h3 class="font-semibold text-slate-900 text-sm">Data Science</h3>
-                    <p class="text-xs text-slate-600 mt-1">Python, Pandas, ML Models & Projects.</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">INR (72,000 - 80,000) • 100 classes</p>
-                    <p class="font-semibold text-slate-900 text-sm mt-3">USD (1999 - 2399) • 100 classes</p>
+                    <p class="text-xs text-slate-600 mt-1">Python, Pandas, ML Models & Projects</p>
+
+                    <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                        INR (72,000 - 80,000) • 100 classes
+                    </p>
+                    <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                        USD (1999 - 2399) • 100 classes
+                    </p>
+
                     <a href="#contact"
                         class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
                         Enquire
                     </a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -599,7 +655,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>
-
-
