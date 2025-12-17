@@ -50,6 +50,8 @@
             position: relative;
             width: 100%;
             height: 100%;
+            transform-style: preserve-3d; 
+            transition: transform 0.7s ease;
         }
 
         .flip-front,
@@ -87,16 +89,12 @@
         <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 lg:px-2 py-3">
             <div class="flex items-center gap-2">
                 <a href="#hero" class="flex items-center gap-2">
-                    <img
-                      src="assests/newGen_logo.svg"
-                      alt="NewGen Robotics Logo"
-                      class="h-9 w-9 object-contain"
-                    />
+                    <img src="assests/newGen_logo.svg" alt="NewGen Robotics Logo" class="h-9 w-9 object-contain" />
                     <div>
-                      <p class="font-semibold tracking-tight text-slate-900">NewGen Robotics</p>
-                      <p class="text-xs text-slate-500">Coding • Robotics • Data</p>
+                        <p class="font-semibold tracking-tight text-slate-900">NewGen Robotics</p>
+                        <p class="text-xs text-slate-500">Coding • Robotics • Data</p>
                     </div>
-                  </a>
+                </a>
             </div>
 
             <button id="navToggle"
@@ -202,29 +200,58 @@
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Scratch -->
+                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
 
-                <!-- CS Fundamentals -->
-                <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+                    <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
-                    <!-- Course Image -->
-                    <img src="assests/computer_Science.png" alt="Cs Course" class="w-full h-32 object-cover">
+                        <!-- FRONT -->
+                        <div class="flip-front">
+                            <img src="assests/Scratch.png" alt="Scratch" class="w-full h-32 object-cover">
 
+                            <div class="p-5 bg-orange-200 h-full">
+                                <h3 class="font-semibold text-slate-900 text-sm">Scratch Programming</h3>
+                                <p class="text-xs text-slate-600 mt-1">First step in programming world</p>
 
-                    <div class="p-5 bg-slate-100">
-                        <h3 class="font-semibold text-slate-900 text-sm">CS Fundamentals</h3>
-                        <p class="text-xs text-slate-600 mt-1">Learn Computer Insights</p>
+                                <p class="price-inr font-semibold text-slate-900 text-sm mt-3">INR</p>
+                                <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">USD</p>
 
-                        <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
-                            INR (23,000 - 27,000) • 50 classes
-                        </p>
-                        <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
-                            USD (750 - 899) • 50 classes
-                        </p>
+                                <a href="https://wa.me/919971475942" target="_blank"
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Enquire
+                                </a>
 
-                        <a href="https://wa.me/919971475942" target="_blank"
-                            class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
-                            Enquire
-                        </a>
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-back bg-slate-900 text-white p-5">
+                            <h4 class="font-semibold text-sm mb-3">
+                                Learning Outcomes
+                            </h4>
+
+                            <ul class="text-xs space-y-2 text-white/90">
+                                <li>• Logical Thinking & Problem Solving</li>
+                                <li>• Basic Programming Concepts</li>
+                                <li>• Creativity & Storytelling</li>
+                                <li>• Computational Thinking</li>
+                                <li>• Confidence & Collaboration</li>
+                                <li>• Understanding Cause & Effect</li>
+                                <li>• Debugging Skills</li>
+                                <li>• Basic Math & Logic Application</li>
+                                <li>• Digital Literacy & Safe Sharing</li>
+                                <li>• Persistence & Growth Mindset</li>
+                            </ul>
+
+                            <p class="mt-4 text-[11px] text-white/70">
+                                Click again to go back
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
@@ -235,27 +262,27 @@
 
                         <!-- FRONT -->
                         <div class="flip-front">
-                            <img src="assests/Arduino.png" alt="Cs Course" class="w-full h-32 object-cover">
+                            <img src="assests/Arduino.png" alt="Arduino" class="w-full h-32 object-cover">
 
-                            <div class="p-5 bg-slate-100 h-full">
+                            <div class="p-5 bg-blue-100 h-full">
                                 <h3 class="font-semibold text-slate-900 text-sm">Arduino</h3>
                                 <p class="text-xs text-slate-600 mt-1">Sensors, circuits, motors</p>
 
                                 <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
-                                    INR (16,800 - 18,500) • 36 classes
+                                    INR ()
                                 </p>
 
                                 <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
-                                    USD (549 - 649) • 36 classes
+                                    USD ()
                                 </p>
 
                                 <a href="https://wa.me/919971475942" target="_blank"
-                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs">
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
                                     Enquire
                                 </a>
 
-                                <p class="text-[11px] text-slate-500 mt-3">
-                                    Click to view syllabus →
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
                                 </p>
                             </div>
                         </div>
@@ -282,159 +309,391 @@
 
                     </div>
                 </div>
-                
-                <!-- IoT -->
-                <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
 
-                    <!-- Course Image -->
-                    <img src="assests/iot.png" alt="Iot Course" class="w-full h-32 object-cover">
+                <!-- MIT App development -->
+                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
 
+                    <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
-                    <!-- Card Content -->
-                    <div class="p-5 bg-slate-100">
-                        <h3 class="font-semibold text-slate-900 text-sm">Internet of Things</h3>
-                        <p class="text-xs text-slate-600 mt-1">Wifi, bluetooth, Cloud dashboards</p>
+                        <!-- FRONT -->
+                        <div class="flip-front">
+                            <img src="assests/mit.jpg" alt="App development" class="w-full h-32 object-cover">
 
-                        <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
-                            INR (20,000 - 25,000) • 36 classes
-                        </p>
-                        <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
-                            USD (579 - 699) • 36 classes
-                        </p>
+                            <div class="p-5 bg-green-100 h-full">
+                                <h3 class="font-semibold text-slate-900 text-sm">App development for kids</h3>
+                                <p class="text-xs text-slate-600 mt-1">Create apps for mobile and tablets in android and ios</p>
 
-                        <a href="https://wa.me/919971475942" target="_blank"
-                            class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
-                            Enquire
-                        </a>
+                                <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                                    INR ()
+                                </p>
+
+                                <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                                    USD ()
+                                </p>
+
+                                <a href="https://wa.me/919971475942" target="_blank"
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Enquire
+                                </a>
+
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-back bg-slate-900 text-white p-5">
+                            <h4 class="font-semibold text-sm mb-3">
+                                Arduino - Syllabus Highlights
+                            </h4>
+
+                            <ul class="text-xs space-y-2 text-white/90">
+                                <li>• Arduino IDE & C basics</li>
+                                <li>• Digital & Analog I/O</li>
+                                <li>• Sensors & modules</li>
+                                <li>• Motors & drivers</li>
+                                <li>• Automation projects</li>
+                                <li>• Final real-world build</li>
+                            </ul>
+
+                            <p class="mt-4 text-[11px] text-white/70">
+                                Click again to go back
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
+                <!-- Python Programming -->
+                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
 
+                    <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
-                <!-- Python -->
-                <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+                        <!-- FRONT -->
+                        <div class="flip-front">
+                            <img src="assests/Python_programming.jpg" alt="Cs Course" class="w-full h-32 object-cover">
 
-                    <!-- Course Image -->
-                    <img src="assests/Python.png" alt="Python Course" class="w-full h-32 object-cover">
+                            <div class="p-5 bg-purple-100 h-full">
+                                <h3 class="font-semibold text-slate-900 text-sm">Python programming</h3>
+                                <p class="text-xs text-slate-600 mt-1">Python programming for kids</p>
 
+                                <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                                    INR ()
+                                </p>
 
-                    <!-- Card Content -->
-                    <div class="p-5 bg-slate-100">
-                        <h3 class="font-semibold text-slate-900 text-sm">Python Programming</h3>
-                        <p class="text-xs text-slate-600 mt-1">Learn Python from basics to projects.</p>
+                                <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                                    USD ()
+                                </p>
 
-                        <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
-                            INR (59,999 - 64,999) • 100 classes
-                        </p>
-                        <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
-                            USD (1999 - 2199) • 100 classes
-                        </p>
+                                <a href="https://wa.me/919971475942" target="_blank"
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Enquire
+                                </a>
 
-                        <a href="https://wa.me/919971475942" target="_blank"
-                            class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
-                            Enquire
-                        </a>
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-back bg-slate-900 text-white p-5">
+                            <h4 class="font-semibold text-sm mb-3">
+                                Arduino - Syllabus Highlights
+                            </h4>
+
+                            <ul class="text-xs space-y-2 text-white/90">
+                                <li>• Arduino IDE & C basics</li>
+                                <li>• Digital & Analog I/O</li>
+                                <li>• Sensors & modules</li>
+                                <li>• Motors & drivers</li>
+                                <li>• Automation projects</li>
+                                <li>• Final real-world build</li>
+                            </ul>
+
+                            <p class="mt-4 text-[11px] text-white/70">
+                                Click again to go back
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- Data Analysis -->
-                <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+                <!-- Data analysis -->
+                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
 
-                    <!-- Course Image -->
-                    <img src="assests/data_analysis.png" alt="Data_Analysis Course" class="w-full h-32 object-cover">
+                    <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
+                        <!-- FRONT -->
+                        <div class="flip-front">
+                            <img src="assests/data_analysis.jpg" alt="Data analysis" class="w-full h-32 object-cover">
 
-                    <!-- Card Content -->
-                    <div class="p-5 bg-slate-100">
-                        <h3 class="font-semibold text-slate-900 text-sm">Data Analysis</h3>
-                        <p class="text-xs text-slate-600 mt-1">Excel, SQL, Power BI / Tableau dashboards</p>
+                            <div class="p-5 bg-cyan-100 h-full">
+                                <h3 class="font-semibold text-slate-900 text-sm">Data Analysis</h3>
+                                <p class="text-xs text-slate-600 mt-1">Data Analysis for kids</p>
 
-                        <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
-                            INR (36,000 - 40,000) • 50 classes
-                        </p>
-                        <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
-                            USD (999 - 1250) • 50 classes
-                        </p>
+                                <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                                    INR ()
+                                </p>
 
-                        <a href="https://wa.me/919971475942" target="_blank"
-                            class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
-                            Enquire
-                        </a>
+                                <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                                    USD ()
+                                </p>
+
+                                <a href="https://wa.me/919971475942" target="_blank"
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Enquire
+                                </a>
+
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-back bg-slate-900 text-white p-5">
+                            <h4 class="font-semibold text-sm mb-3">
+                                Arduino - Syllabus Highlights
+                            </h4>
+
+                            <ul class="text-xs space-y-2 text-white/90">
+                                <li>• Arduino IDE & C basics</li>
+                                <li>• Digital & Analog I/O</li>
+                                <li>• Sensors & modules</li>
+                                <li>• Motors & drivers</li>
+                                <li>• Automation projects</li>
+                                <li>• Final real-world build</li>
+                            </ul>
+
+                            <p class="mt-4 text-[11px] text-white/70">
+                                Click again to go back
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
                 <!-- Data Science -->
-                <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
 
-                    <!-- Course Image -->
-                    <img src="assests/data_science.png" alt="Data_science Course" class="w-full h-32 object-cover">
-                    <!-- Card Content -->
-                    <div class="p-5 bg-slate-100">
-                        <h3 class="font-semibold text-slate-900 text-sm">Data Science</h3>
-                        <p class="text-xs text-slate-600 mt-1">Python, Pandas, ML Models & Projects</p>
+                    <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
-                        <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
-                            INR (72,000 - 80,000) • 100 classes
-                        </p>
-                        <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
-                            USD (1999 - 2399) • 100 classes
-                        </p>
+                        <!-- FRONT -->
+                        <div class="flip-front">
+                            <img src="assests/ml.jpg" alt="Ml" class="w-full h-32 object-cover">
 
-                        <a href="https://wa.me/919971475942" target="_blank"
-                            class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
-                            Enquire
-                        </a>
+                            <div class="p-5 bg-red-100 h-full">
+                                <h3 class="font-semibold text-slate-900 text-sm">Junior Data Science</h3>
+                                <p class="text-xs text-slate-600 mt-1">Data science for kids</p>
+
+                                <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                                    INR ()
+                                </p>
+
+                                <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                                    USD () 
+                                </p>
+
+                                <a href="https://wa.me/919971475942" target="_blank"
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Enquire
+                                </a>
+
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-back bg-slate-900 text-white p-5">
+                            <h4 class="font-semibold text-sm mb-3">
+                                Arduino - Syllabus Highlights
+                            </h4>
+
+                            <ul class="text-xs space-y-2 text-white/90">
+                                <li>• Arduino IDE & C basics</li>
+                                <li>• Digital & Analog I/O</li>
+                                <li>• Sensors & modules</li>
+                                <li>• Motors & drivers</li>
+                                <li>• Automation projects</li>
+                                <li>• Final real-world build</li>
+                            </ul>
+
+                            <p class="mt-4 text-[11px] text-white/70">
+                                Click again to go back
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- AI Tools -->
-                <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+                <!-- Ai -->
+                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
 
-                    <!-- Course Image -->
-                    <img src="assests/ai_tools.jpg" alt="Ai_tools Course" class="w-full h-32 object-cover">
-                    <!-- Card Content -->
-                    <div class="p-5 bg-slate-100">
-                        <h3 class="font-semibold text-slate-900 text-sm">Ai Tools</h3>
-                        <p class="text-xs text-slate-600 mt-1">Learn latest tools like ChatGPT, Gemini, etc.</p>
+                    <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
-                        <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
-                            INR (12,000 - 15,000) • 30 classes
-                        </p>
-                        <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
-                            USD (132 - 165) • 30 classes
-                        </p>
+                        <!-- FRONT -->
+                        <div class="flip-front">
+                            <img src="assests/Ai.png" alt="Ai" class="w-full h-32 object-cover">
 
-                        <a href="https://wa.me/919971475942" target="_blank"
-                            class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
-                            Enquire
-                        </a>
+                            <div class="p-5 bg-yellow-100 h-full">
+                                <h3 class="font-semibold text-slate-900 text-sm">Artificial Intelligence</h3>
+                                <p class="text-xs text-slate-600 mt-1">Ai for kids</p>
+
+                                <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                                    INR ()
+                                </p>
+
+                                <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                                    USD () 
+                                </p>
+
+                                <a href="https://wa.me/919971475942" target="_blank"
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Enquire
+                                </a>
+
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-back bg-slate-900 text-white p-5">
+                            <h4 class="font-semibold text-sm mb-3">
+                                Arduino - Syllabus Highlights
+                            </h4>
+
+                            <ul class="text-xs space-y-2 text-white/90">
+                                <li>• Arduino IDE & C basics</li>
+                                <li>• Digital & Analog I/O</li>
+                                <li>• Sensors & modules</li>
+                                <li>• Motors & drivers</li>
+                                <li>• Automation projects</li>
+                                <li>• Final real-world build</li>
+                            </ul>
+
+                            <p class="mt-4 text-[11px] text-white/70">
+                                Click again to go back
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- Ms office -->
-                <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+                <!-- Dsa -->
+                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
 
-                    <!-- Course Image -->
-                    <img src="assests/ms_office.png" alt="ms_office Course" class="w-full h-32 object-cover">
-                    <!-- Card Content -->
-                    <div class="p-5 bg-slate-100">
-                        <h3 class="font-semibold text-slate-900 text-sm">Ms Office tools</h3>
-                        <p class="text-xs text-slate-600 mt-1">Learn Word, Excel, Powerpoint in depth</p>
+                    <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
-                        <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
-                            INR (5,000 - 7,000) • 30 classes
-                        </p>
-                        <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
-                            USD (55 - 77) • 30 classes
-                        </p>
+                        <!-- FRONT -->
+                        <div class="flip-front">
+                            <img src="assests/dsa.jpg" alt="Dsa" class="w-full h-32 object-cover">
 
-                        <a href="https://wa.me/919971475942" target="_blank"
-                            class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
-                            Enquire
-                        </a>
+                            <div class="p-5 bg-pink-100 h-full">
+                                <h3 class="font-semibold text-slate-900 text-sm">DSA with Python/C++</h3>
+                                <p class="text-xs text-slate-600 mt-1">DSA for kids</p>
+
+                                <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                                    INR ()
+                                </p>
+
+                                <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                                    USD ()
+                                </p>
+
+                                <a href="https://wa.me/919971475942" target="_blank"
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Enquire
+                                </a>
+
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-back bg-slate-900 text-white p-5">
+                            <h4 class="font-semibold text-sm mb-3">
+                                Arduino - Syllabus Highlights
+                            </h4>
+
+                            <ul class="text-xs space-y-2 text-white/90">
+                                <li>• Arduino IDE & C basics</li>
+                                <li>• Digital & Analog I/O</li>
+                                <li>• Sensors & modules</li>
+                                <li>• Motors & drivers</li>
+                                <li>• Automation projects</li>
+                                <li>• Final real-world build</li>
+                            </ul>
+
+                            <p class="mt-4 text-[11px] text-white/70">
+                                Click again to go back
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
+                <!-- Cs fundamentals -->
+                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+
+                    <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
+
+                        <!-- FRONT -->
+                        <div class="flip-front">
+                            <img src="assests/cs.jpg" alt="Cs course" class="w-full h-32 object-cover">
+
+                            <div class="p-5 bg-slate-100 h-full">
+                                <h3 class="font-semibold text-slate-900 text-sm">CS Fundamentals</h3>
+                                <p class="text-xs text-slate-600 mt-1">Learn computer basics</p>
+
+                                <p class="price-inr font-semibold text-slate-900 text-sm mt-3">
+                                    INR ()
+                                </p>
+
+                                <p class="price-usd hidden font-semibold text-slate-900 text-sm mt-3">
+                                    USD () 
+                                </p>
+
+                                <a href="https://wa.me/919971475942" target="_blank"
+                                    class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Enquire
+                                </a>
+
+                                <p class="mt-4 inline-block rounded-full border border-slate-400 px-4 py-1 text-xs hover:bg-slate-900 hover:text-white transition">
+                                    Syllabus
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- BACK -->
+                        <div class="flip-back bg-slate-900 text-white p-5">
+                            <h4 class="font-semibold text-sm mb-3">
+                                Arduino - Syllabus Highlights
+                            </h4>
+
+                            <ul class="text-xs space-y-2 text-white/90">
+                                <li>• Arduino IDE & C basics</li>
+                                <li>• Digital & Analog I/O</li>
+                                <li>• Sensors & modules</li>
+                                <li>• Motors & drivers</li>
+                                <li>• Automation projects</li>
+                                <li>• Final real-world build</li>
+                            </ul>
+
+                            <p class="mt-4 text-[11px] text-white/70">
+                                Click again to go back
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -822,7 +1081,6 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer class="border-t border-slate-200 bg-slate-50 text-center py-4">
         <p class="text-xs text-slate-500">
@@ -836,3 +1094,4 @@
 </body>
 
 </html>
+
