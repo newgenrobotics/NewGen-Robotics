@@ -148,47 +148,51 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  const words = [
-    "taught simply.",
-    "made practical.",
-    "built for the future.",
-    "through projects."
-  ];
-
   const typingEl = document.getElementById("typing-text");
   if (!typingEl) return;
 
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  const typeSpeed = 80;
-  const deleteSpeed = 40;
-  const holdDelay = 1200;
-
-  function typeEffect() {
-    const currentWord = words[wordIndex];
-
-    if (!isDeleting) {
-      typingEl.textContent = currentWord.slice(0, charIndex + 1);
-      charIndex++;
-
-      if (charIndex === currentWord.length) {
-        setTimeout(() => (isDeleting = true), holdDelay);
-      }
-    } else {
-      typingEl.textContent = currentWord.slice(0, charIndex - 1);
-      charIndex--;
-
-      if (charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-      }
-    }
-
-    setTimeout(typeEffect, isDeleting ? deleteSpeed : typeSpeed);
+  // Respect reduced motion
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    typingEl.textContent = "taught with clarity.";
+    typingEl.classList.remove("border-r");
+    return;
   }
 
-  typeEffect();
+  const words = [
+    "made simple.",
+    "built to last.",
+    "taught with clarity." // ← PERFECT FINAL WORD
+  ];
+
+  let wordIndex = 0;
+  let charIndex = 0;
+
+  const typeSpeed = 110;
+  const holdDelay = 1200;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    typingEl.textContent = currentWord.slice(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex < currentWord.length) {
+      setTimeout(type, typeSpeed);
+    } else {
+      // Finished typing a word
+      if (wordIndex < words.length - 1) {
+        // Move to next word after pause
+        setTimeout(() => {
+          wordIndex++;
+          charIndex = 0;
+          type();
+        }, holdDelay);
+      } else {
+        // FINAL WORD → stop animation + remove cursor
+        typingEl.classList.remove("border-r");
+      }
+    }
+  }
+
+  type();
 });
+
