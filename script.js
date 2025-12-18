@@ -146,3 +146,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   counters.forEach(counter => observer.observe(counter));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const words = [
+    "taught simply.",
+    "made practical.",
+    "built for the future.",
+    "through projects."
+  ];
+
+  const typingEl = document.getElementById("typing-text");
+  if (!typingEl) return;
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const typeSpeed = 80;
+  const deleteSpeed = 40;
+  const holdDelay = 1200;
+
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+      typingEl.textContent = currentWord.slice(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentWord.length) {
+        setTimeout(() => (isDeleting = true), holdDelay);
+      }
+    } else {
+      typingEl.textContent = currentWord.slice(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+    }
+
+    setTimeout(typeEffect, isDeleting ? deleteSpeed : typeSpeed);
+  }
+
+  typeEffect();
+});
