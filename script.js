@@ -109,3 +109,40 @@ toggle.addEventListener("change", () => {
     usdPrices.forEach(el => el.classList.add("hidden"));
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const numberEl = entry.target;
+      const suffixEl = numberEl.nextElementSibling;
+      const target = Number(numberEl.dataset.target);
+      let count = 0;
+
+      const update = () => {
+        count += target / 60;
+
+        if (count < target) {
+          numberEl.textContent = Math.ceil(count);
+          requestAnimationFrame(update);
+        } else {
+          numberEl.textContent = target;
+
+          // Reveal suffix after counting finishes
+          if (suffixEl) {
+            suffixEl.classList.remove("opacity-0", "translate-y-1");
+            suffixEl.classList.add("opacity-100", "translate-y-0");
+          }
+        }
+      };
+
+      update();
+      observer.unobserve(numberEl);
+    });
+  });
+
+  counters.forEach(counter => observer.observe(counter));
+});
