@@ -244,11 +244,28 @@
 
 
     <!-- Courses -->
+     
     <section id="courses" class="border-t border-slate-200 bg-white">
+        
         <div class="max-w-6xl mx-auto px-4 py-14">
             <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-8">
                 Courses & Pricing
             </h2>
+            <div class="flex flex-wrap gap-3 mb-8">
+                <button class="age-btn px-4 py-1 rounded-full border text-sm" data-filter="all">
+                  All
+                </button>
+                <button class="age-btn px-4 py-1 rounded-full border text-sm" data-filter="kids">
+                  Kids (5+)
+                </button>
+                <button class="age-btn px-4 py-1 rounded-full border text-sm" data-filter="teens">
+                  Teens (10+)
+                </button>
+                <button class="age-btn px-4 py-1 rounded-full border text-sm" data-filter="adults">
+                  Adults (18+)
+                </button>
+              </div>
+              
             <div class="flex items-center gap-3 mb-6">
                 <span class="text-sm font-medium text-slate-600">INR</span>
 
@@ -267,7 +284,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Cs fundamentals -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -335,7 +352,7 @@
                 </div>
 
                 <!-- Dsa -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all teens" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -401,7 +418,7 @@
                 </div>
 
                 <!-- Scratch -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -466,7 +483,7 @@
                 </div>
 
                 <!-- MIT App development -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -532,7 +549,7 @@
                 </div>
 
                 <!-- Python Programming -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -598,7 +615,7 @@
                 </div>
 
                 <!-- Arduino -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -664,7 +681,7 @@
                 </div>
 
                 <!-- IoT -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -730,7 +747,7 @@
                 </div>
 
                 <!-- Ai -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all teens" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -795,7 +812,7 @@
                     </div>
                 </div>
                 <!-- Data analysis -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all adults" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -861,7 +878,7 @@
                 </div>
 
                 <!-- Data Science -->
-                <div class="flip-card h-[360px] cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all adults" onclick="this.classList.toggle('active')">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -871,7 +888,7 @@
 
                             <div class="p-5 bg-red-100 h-full">
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
-                                    <span>Data Science for Kids</span>
+                                    <span>Data Science for kids</span>
                                     <span class="text-xs font-medium text-slate-600">70 Hours</span>
                                     </h3>
                                 <p class="text-xs text-slate-600 mt-1">Help kids explore data, find patterns, and make
@@ -1055,7 +1072,7 @@
 
                 <div class="min-w-[260px] rounded-2xl bg-white border border-slate-200 p-4 text-xs">
                     <p class="text-slate-700 mb-3">
-                        “The Robotics workshop in our school was the best STEM activity we’ve ever had. Kids were
+                        “The Robotics workshop in our school was the best STEM activity we’ve ever had. kids were
                         excited for days!”
                     </p>
                     <p class="font-semibold text-slate-900">School Parent</p>
