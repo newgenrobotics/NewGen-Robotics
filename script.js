@@ -196,23 +196,36 @@ document.addEventListener("DOMContentLoaded", () => {
   type();
 });
 
-const buttons = document.querySelectorAll(".age-btn");
-const cards = document.querySelectorAll(".flip-card");
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".age-btn");
+  const cards = document.querySelectorAll(".flip-card");
 
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const filter = btn.dataset.filter;
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
 
-    buttons.forEach(b => b.classList.remove("bg-slate-900", "text-white"));
-    btn.classList.add("bg-slate-900", "text-white");
+      // Active button style
+      buttons.forEach(b =>
+        b.classList.remove("bg-slate-900", "text-white")
+      );
+      btn.classList.add("bg-slate-900", "text-white");
 
-    cards.forEach(card => {
-      const ages = card.dataset.age;
-      if (filter === "all" || ages.includes(filter)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
+      // Filter cards
+      cards.forEach(card => {
+        const ages = card.dataset.age.split(" ");
+        card.style.display =
+          filter === "all" || ages.includes(filter)
+            ? "block"
+            : "none";
+      });
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".flip-card").forEach(card => {
+    card.addEventListener("click", () => {
+      card.classList.toggle("active");
     });
   });
 });

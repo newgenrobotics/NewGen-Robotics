@@ -79,6 +79,10 @@
         .flip-card.active .flip-back {
             transform: rotateY(0deg);
         }
+
+        .age-btn {
+            touch-action: manipulation;
+        }
     </style>
 </head>
 
@@ -135,11 +139,7 @@
     <section id="hero" class="relative max-w-6xl mx-auto px-4 lg:px-2 pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
         <!-- Hero Background Image -->
         <div class="absolute inset-0 -z-10">
-            <img
-                src="assets/hero_image.jpg"
-                alt=""
-                class="w-full h-full object-cover object-center opacity-90"
-            />
+            <img src="assets/hero_image.jpg" alt="" class="w-full h-full object-cover object-center opacity-90" />
             <!-- Soft overlay -->
             <div class="absolute inset-0 bg-white/70"></div>
         </div>
@@ -150,13 +150,11 @@
                 </p>
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 mb-4">
                     Future-ready skills,
-                    <span
-                      id="typing-text"
-                      class="text-slate-500 border-r border-slate-300 pr-1 inline-block min-h-[1.2em]"
-                    ></span>
-                  </h1>
-                  
-                
+                    <span id="typing-text"
+                        class="text-slate-500 border-r border-slate-300 pr-1 inline-block min-h-[1.2em]"></span>
+                </h1>
+
+
                 <p class="text-sm sm:text-base text-slate-600 mb-6 max-w-xl">
                     I teach Computer Science, Python, Arduino, IoT, DSA, Data Analytics, Data Science & Ai
                     through practical, project-based online classes.
@@ -244,28 +242,28 @@
 
 
     <!-- Courses -->
-     
+
     <section id="courses" class="border-t border-slate-200 bg-white">
-        
+
         <div class="max-w-6xl mx-auto px-4 py-14">
             <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 mb-8">
                 Courses & Pricing
             </h2>
             <div class="flex flex-wrap gap-3 mb-8">
                 <button class="age-btn px-4 py-1 rounded-full border text-sm" data-filter="all">
-                  All
+                    All
                 </button>
                 <button class="age-btn px-4 py-1 rounded-full border text-sm" data-filter="kids">
-                  Kids (5+)
+                    Kids (5+)
                 </button>
                 <button class="age-btn px-4 py-1 rounded-full border text-sm" data-filter="teens">
-                  Teens (10+)
+                    Teens (10+)
                 </button>
                 <button class="age-btn px-4 py-1 rounded-full border text-sm" data-filter="adults">
-                  Adults (18+)
+                    Adults (18+)
                 </button>
-              </div>
-              
+            </div>
+
             <div class="flex items-center gap-3 mb-6">
                 <span class="text-sm font-medium text-slate-600">INR</span>
 
@@ -284,7 +282,7 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Cs fundamentals -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -295,8 +293,8 @@
                             <div class="p-5 bg-slate-100 h-full">
 
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
-                                <span>CS Fundamentals</span>
-                                <span class="text-xs font-medium text-slate-600">30 hours</span>
+                                    <span>CS Fundamentals</span>
+                                    <span class="text-xs font-medium text-slate-600">30 hours</span>
                                 </h3>
 
                                 <p class="text-xs text-slate-600 mt-1">Build basic computer and logical thinking skills.
@@ -352,7 +350,7 @@
                 </div>
 
                 <!-- Dsa -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all teens" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all teens">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -364,7 +362,7 @@
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
                                     <span>DSA with Python/C++</span>
                                     <span class="text-xs font-medium text-slate-600">30 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Develop logical thinking and efficient
                                     problem-solving skills.</p>
 
@@ -418,7 +416,7 @@
                 </div>
 
                 <!-- Scratch -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -430,7 +428,7 @@
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
                                     <span>Scratch Programming</span>
                                     <span class="text-xs font-medium text-slate-600">20 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Enable kids to create games and animations while
                                     learning coding basics through visual blocks.</p>
 
@@ -483,7 +481,7 @@
                 </div>
 
                 <!-- MIT App development -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -493,9 +491,9 @@
 
                             <div class="p-5 bg-green-100 h-full">
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
-                                    <span>App development for  kids</span>
+                                    <span>App development for kids</span>
                                     <span class="text-xs font-medium text-slate-600">25 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Empower kids to design and build their own mobile
                                     applications.</p>
 
@@ -549,7 +547,7 @@
                 </div>
 
                 <!-- Python Programming -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -561,7 +559,7 @@
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
                                     <span>Python Programming for kids</span>
                                     <span class="text-xs font-medium text-slate-600">30 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Enable kids to code confidently and solve
                                     problems using Python.</p>
 
@@ -615,7 +613,7 @@
                 </div>
 
                 <!-- Arduino -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -627,7 +625,7 @@
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
                                     <span>Robotics for kids</span>
                                     <span class="text-xs font-medium text-slate-600">36 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Teach hands-on electronics and robotics through
                                     real-world projects.</p>
 
@@ -681,7 +679,7 @@
                 </div>
 
                 <!-- IoT -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all kids">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -693,7 +691,7 @@
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
                                     <span>Internet of things for kids</span>
                                     <span class="text-xs font-medium text-slate-600">36 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Teach kids how smart devices connect, collect
                                     data, and work together to solve real-world problems.</p>
 
@@ -747,7 +745,7 @@
                 </div>
 
                 <!-- Ai -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all teens" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all teens">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -759,7 +757,7 @@
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
                                     <span>Artificial Intelligence for kids</span>
                                     <span class="text-xs font-medium text-slate-600">30 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Introduce kids to intelligent machines and
                                     responsible AI creation.</p>
 
@@ -812,7 +810,7 @@
                     </div>
                 </div>
                 <!-- Data analysis -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all adults" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all adults">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -824,7 +822,7 @@
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
                                     <span>Data Analysis for kids</span>
                                     <span class="text-xs font-medium text-slate-600">50 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Teach kids to understand, analyze, and draw
                                     conclusions from data.</p>
 
@@ -878,7 +876,7 @@
                 </div>
 
                 <!-- Data Science -->
-                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all adults" onclick="this.classList.toggle('active')">
+                <div class="flip-card min-h-[360px] h-auto cursor-pointer" data-age="all adults">
 
                     <div class="flip-inner rounded-2xl border border-slate-200 overflow-hidden bg-white">
 
@@ -890,7 +888,7 @@
                                 <h3 class="flex items-center justify-between font-semibold text-slate-900 text-sm">
                                     <span>Data Science for kids</span>
                                     <span class="text-xs font-medium text-slate-600">70 Hours</span>
-                                    </h3>
+                                </h3>
                                 <p class="text-xs text-slate-600 mt-1">Help kids explore data, find patterns, and make
                                     data-driven decisions.</p>
 
