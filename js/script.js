@@ -169,6 +169,50 @@ function initSite() {
     counters.forEach(counter => counterObserver.observe(counter));
   }
 
+  // Hero typing animation
+  const typingEl = document.getElementById("typing-text");
+
+  if (typingEl) {
+    // Respect reduced motion
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      typingEl.textContent = "taught with clarity.";
+      typingEl.classList.remove("border-r");
+    } else {
+      const words = [
+        "made simple.",
+        "built to last.",
+        "taught with clarity."
+      ];
+
+      let wordIndex = 0;
+      let charIndex = 0;
+      const typeSpeed = 110;
+      const holdDelay = 1200;
+
+      function type() {
+        const currentWord = words[wordIndex];
+        typingEl.textContent = currentWord.slice(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex < currentWord.length) {
+          setTimeout(type, typeSpeed);
+        } else if (wordIndex < words.length - 1) {
+          setTimeout(() => {
+            wordIndex++;
+            charIndex = 0;
+            type();
+          }, holdDelay);
+        } else {
+          // Final word → stop cursor
+          typingEl.classList.remove("border-r");
+        }
+      }
+
+      type();
+    }
+  }
+
+
 
 }
 
