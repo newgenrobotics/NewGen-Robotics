@@ -180,10 +180,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 4. Safely package data structure for URLs
             const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-            // 5. Fire tab redirect
-            window.open(whatsappUrl, '_blank');
+            // 5. Detect if the user device is iOS (iPhone/iPad)
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+            if (isIOS) {
+                // iOS friendly deep-link protocol that native apps intercept immediately
+                const iosWhatsappUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodedMessage}`;
+                
+                // Changing the window location directly bypasses Safari's pop-up blocker
+                window.location.href = iosWhatsappUrl;
+                
+                // Fallback redirect to the web portal if they do not have the native application installed
+                setTimeout(() => {
+                    window.location.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                }, 500);
+            } else {
+                // Desktop and Android handle standard web links in a fresh tab beautifully
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                window.open(whatsappUrl, '_blank');
+            }
         });
     }
 });
