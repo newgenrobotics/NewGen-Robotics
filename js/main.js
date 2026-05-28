@@ -152,34 +152,38 @@ document.addEventListener('keydown', function(event) {
 });
 
 // --- WHATSAPP FORM SUBMISSION LOGIC ---
-document.getElementById('trialForm').addEventListener('submit', function(event) {
-    // Stop the page from reloading normally
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const formElement = document.getElementById('trialForm');
+    
+    if (formElement) {
+        formElement.addEventListener('submit', function(event) {
+            // Stop the standard browser form submission loop immediately
+            event.preventDefault();
 
-    // 1. Get values from the form inputs
-    const name = document.getElementById('parentName').value;
-    const email = document.getElementById('parentEmail').value;
-    const phone = document.getElementById('parentPhone').value;
-    const grade = document.getElementById('childGrade').value;
-    const course = document.getElementById('selectedCourse').value;
+            // 1. Get input fields
+            const name = document.getElementById('parentName').value;
+            const email = document.getElementById('parentEmail').value;
+            const phone = document.getElementById('parentPhone').value;
+            const grade = document.getElementById('childGrade').value;
+            const course = document.getElementById('selectedCourse').value;
 
-    // 2. Set your WhatsApp Business Number (Format: CountryCode + Number, no spaces or + signs)
-    const whatsappNumber = "8826821126"; 
+            // 2. Set business line destination
+            const whatsappNumber = "918826821126"; 
 
-    // 3. Format the clean text layout using template strings
-    const message = `🤖 *New Trial Class Booking* 🤖\n\n` +
-                    `👤 *Parent's Name:* ${name}\n` +
-                    `📧 *Email:* ${email}\n` +
-                    `📞 *Phone Number:* ${phone}\n` +
-                    `🎓 *Child's Grade:* ${grade}\n` +
-                    `💻 *Selected Course:* ${course}`;
+            // 3. Format message layout
+            const message = `🤖 *New Trial Class Booking* 🤖\n\n` +
+                            `👤 *Parent's Name:* ${name}\n` +
+                            `📧 *Email:* ${email}\n` +
+                            `📞 *Phone Number:* ${phone}\n` +
+                            `🎓 *Child's Grade:* ${grade}\n` +
+                            `💻 *Selected Course:* ${course}`;
 
-    // 4. Encode the text safely for URLs
-    const encodedMessage = encodeURIComponent(message);
+            // 4. Safely package data structure for URLs
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-    // 5. Build the complete URL structure
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-    // 6. Redirect the user to WhatsApp in a fresh tab
-    window.open(whatsappUrl, '_blank');
+            // 5. Fire tab redirect
+            window.open(whatsappUrl, '_blank');
+        });
+    }
 });
