@@ -164,7 +164,7 @@ document.getElementById('trialForm').addEventListener('submit', function(event) 
     const course = document.getElementById('selectedCourse').value;
 
     // 2. Set your WhatsApp Business Number (Format: CountryCode + Number, no spaces or + signs)
-    const whatsappNumber = "918826821126"; 
+    const whatsappNumber = "8826821126"; 
 
     // 3. Format the clean text layout using template strings
     const message = `🤖 *New Trial Class Booking* 🤖\n\n` +
