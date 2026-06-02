@@ -208,12 +208,12 @@
 
             <div id="store-slider" class="flex overflow-x-auto gap-4 pb-8 scrollbar-hide cursor-grab active:cursor-grabbing w-full">
                 
-                <div class="bg-white rounded-3xl shadow-soft p-5 min-w-[220px] md:min-w-[240px] flex-shrink-0 flex flex-col hover:-translate-y-2 transition duration-300">
+                <div class="bg-white rounded-3xl shadow-soft p-5 w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] flex-shrink-0 flex flex-col hover:-translate-y-2 transition duration-300">
                     <div class="h-36 bg-gray-100 rounded-2xl mb-4 overflow-hidden relative pointer-events-none">
                         <img src="assets/Advance kit.png" alt="Advanced Robotics Kit" class="w-full h-full object-cover">
                         <span class="absolute top-3 right-3 bg-brandYellow-400 text-gray-900 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Bestseller</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">Advanced Robotics</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Advanced Robotics kit</h3>
                     <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-3">Everything needed to build your first programmable robot. Includes motors, sensors, and a controller board.</p>
                     
                     <button onclick="openModal('modal-adv-robotics')" class="text-brandBlue-600 hover:text-brandBlue-700 font-semibold text-xs mb-4 flex items-center gap-1 transition-colors w-max">
@@ -223,61 +223,9 @@
 
                     <div class="flex items-center justify-between mt-auto">
                         <span class="text-lg font-extrabold text-brandBlue-600">₹3,499</span>
-                        <button class="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-xl font-semibold transition text-sm z-10 relative">Add</button>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-3xl shadow-soft p-5 min-w-[220px] md:min-w-[240px] flex-shrink-0 flex flex-col hover:-translate-y-2 transition duration-300">
-                    <div class="h-36 bg-gray-100 rounded-2xl mb-4 overflow-hidden relative pointer-events-none">
-                        <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Arduino Starter Kit" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">IoT Starter Kit</h3>
-                    <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-3">Perfect for absolute beginners. Dive into the world of Internet of Things with basic wiring and logic.</p>
-                    
-                    <button onclick="openModal('modal-iot')" class="text-brandBlue-600 hover:text-brandBlue-700 font-semibold text-xs mb-4 flex items-center gap-1 transition-colors w-max">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                        View Contents
-                    </button>
-
-                    <div class="flex items-center justify-between mt-auto">
-                        <span class="text-lg font-extrabold text-brandBlue-600">₹1,999</span>
-                        <button class="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-xl font-semibold transition text-sm z-10 relative">Add</button>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-3xl shadow-soft p-5 min-w-[220px] md:min-w-[240px] flex-shrink-0 flex flex-col hover:-translate-y-2 transition duration-300">
-                    <div class="h-36 bg-gray-100 rounded-2xl mb-4 overflow-hidden relative pointer-events-none">
-                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Drone Kit" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">Build-a-Drone</h3>
-                    <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-3">Understand aerodynamics and code flight paths with this programmable mini-drone assembly set.</p>
-                    
-                    <button onclick="openModal('modal-drone')" class="text-brandBlue-600 hover:text-brandBlue-700 font-semibold text-xs mb-4 flex items-center gap-1 transition-colors w-max">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                        View Contents
-                    </button>
-
-                    <div class="flex items-center justify-between mt-auto">
-                        <span class="text-lg font-extrabold text-brandBlue-600">₹5,999</span>
-                        <button class="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-xl font-semibold transition text-sm z-10 relative">Add</button>
-                    </div>
-                </div>
-
-                 <div class="bg-white rounded-3xl shadow-soft p-5 min-w-[220px] md:min-w-[240px] flex-shrink-0 flex flex-col hover:-translate-y-2 transition duration-300">
-                    <div class="h-36 bg-gray-100 rounded-2xl mb-4 overflow-hidden relative pointer-events-none">
-                        <img src="https://images.unsplash.com/photo-1610996847844-316279f6e1f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sensor Pack" class="w-full h-full object-cover">
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">Sensor Pack</h3>
-                    <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-3">Expand your hardware capabilities with 37 different sensors including temperature, light, and motion.</p>
-                    
-                    <button onclick="openModal('modal-sensor')" class="text-brandBlue-600 hover:text-brandBlue-700 font-semibold text-xs mb-4 flex items-center gap-1 transition-colors w-max">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                        View Contents
-                    </button>
-
-                    <div class="flex items-center justify-between mt-auto">
-                        <span class="text-lg font-extrabold text-brandBlue-600">₹2,499</span>
-                        <button class="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-xl font-semibold transition text-sm z-10 relative">Add</button>
+                        <button class="bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-xl font-semibold transition text-sm z-10 relative">
+                            
+                        </button>
                     </div>
                 </div>
             </div>
@@ -355,19 +303,29 @@
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Child's Grade</label>
                             <select id="childGrade" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brandBlue-600 focus:border-brandBlue-600 outline-none transition bg-white">
-                                <option>Grade 1-3</option>
-                                <option>Grade 4-6</option>
-                                <option>Grade 7-9</option>
-                                <option>Grade 10-12</option>
+                                <option>Grade 5</option>
+                                <option>Grade 6</option>
+                                <option>Grade 7</option>
+                                <option>Grade 8</option>
+                                <option>Grade 9</option>
+                                <option>Grade 10</option>
+                                <option>Grade 11</option>
+                                <option>Grade 12</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Select Course</label>
                             <select id="selectedCourse" class="w-full px-5 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brandBlue-600 focus:border-brandBlue-600 outline-none transition bg-white">
                                 <option>Scratch</option>
-                                <option>Robotics</option>
                                 <option>App Development</option>
-                                <option>Programming</option>
+                                <option>Robotics</option>
+                                <option>IoT</option>
+                                <option>Python Programming</option>
+                                <option>Web development</option>
+                                <option>Machine Learning</option>
+                                <option>Data Analysis</option>
+                                <option>Data Science</option>
+                                <option>Artificial intelligence</option>
                             </select>
                         </div>
                     </div>
@@ -456,8 +414,9 @@
                     </li>
                 </ul>
             </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center">
-            &copy; 2026 NewGen Robotics. All rights reserved.
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center">
+                &copy; 2026 NewGen Robotics. All rights reserved.
+            </div>
         </div>
     </footer>
 
@@ -475,46 +434,11 @@
                 <p class="text-sm text-gray-500">Everything included in the box (Click image to zoom):</p>
             </div>
             <div class="rounded-2xl overflow-hidden mb-6 bg-gray-100 flex items-center justify-center border border-gray-200">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Advanced Robotics Kit Contents" class="w-full h-64 object-cover cursor-zoom-in hover:opacity-90 transition duration-300" onclick="openImageZoom(this.src)">
+                <img src="assets/kit.jpg" alt="Advanced Robotics Kit Contents" class="w-full h-64 object-cover cursor-zoom-in hover:opacity-90 transition duration-300" onclick="openImageZoom(this.src)">
             </div>
             <button onclick="closeModal()" class="w-full bg-brandBlue-600 hover:bg-brandBlue-700 text-white font-bold py-3.5 rounded-xl transition shadow-md">Awesome, got it!</button>
         </div>
 
-        <div id="modal-iot" class="modal-content hidden bg-white rounded-3xl p-6 md:p-8 max-w-lg w-full shadow-2xl relative transform transition-all scale-95 flex flex-col">
-            <button onclick="closeModal()" class="absolute top-4 right-5 text-3xl text-gray-400 hover:text-gray-900 z-10">&times;</button>
-            <div class="mb-5 pr-6">
-                <h3 class="text-2xl font-bold text-gray-900 mb-1">IoT Starter Kit</h3>
-                <p class="text-sm text-gray-500">Everything included in the box (Click image to zoom):</p>
-            </div>
-            <div class="rounded-2xl overflow-hidden mb-6 bg-gray-100 flex items-center justify-center border border-gray-200">
-                <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IoT Starter Kit Contents" class="w-full h-64 object-cover cursor-zoom-in hover:opacity-90 transition duration-300" onclick="openImageZoom(this.src)">
-            </div>
-            <button onclick="closeModal()" class="w-full bg-brandBlue-600 hover:bg-brandBlue-700 text-white font-bold py-3.5 rounded-xl transition shadow-md">Awesome, got it!</button>
-        </div>
-
-        <div id="modal-drone" class="modal-content hidden bg-white rounded-3xl p-6 md:p-8 max-w-lg w-full shadow-2xl relative transform transition-all scale-95 flex flex-col">
-            <button onclick="closeModal()" class="absolute top-4 right-5 text-3xl text-gray-400 hover:text-gray-900 z-10">&times;</button>
-            <div class="mb-5 pr-6">
-                <h3 class="text-2xl font-bold text-gray-900 mb-1">Build-a-Drone Kit</h3>
-                <p class="text-sm text-gray-500">Everything included in the box (Click image to zoom):</p>
-            </div>
-            <div class="rounded-2xl overflow-hidden mb-6 bg-gray-100 flex items-center justify-center border border-gray-200">
-                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Drone Kit Contents" class="w-full h-64 object-cover cursor-zoom-in hover:opacity-90 transition duration-300" onclick="openImageZoom(this.src)">
-            </div>
-            <button onclick="closeModal()" class="w-full bg-brandBlue-600 hover:bg-brandBlue-700 text-white font-bold py-3.5 rounded-xl transition shadow-md">Awesome, got it!</button>
-        </div>
-
-        <div id="modal-sensor" class="modal-content hidden bg-white rounded-3xl p-6 md:p-8 max-w-lg w-full shadow-2xl relative transform transition-all scale-95 flex flex-col">
-            <button onclick="closeModal()" class="absolute top-4 right-5 text-3xl text-gray-400 hover:text-gray-900 z-10">&times;</button>
-            <div class="mb-5 pr-6">
-                <h3 class="text-2xl font-bold text-gray-900 mb-1">Ultimate Sensor Pack</h3>
-                <p class="text-sm text-gray-500">Everything included in the box (Click image to zoom):</p>
-            </div>
-            <div class="rounded-2xl overflow-hidden mb-6 bg-gray-100 flex items-center justify-center border border-gray-200">
-                <img src="https://images.unsplash.com/photo-1610996847844-316279f6e1f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sensor Pack Contents" class="w-full h-64 object-cover cursor-zoom-in hover:opacity-90 transition duration-300" onclick="openImageZoom(this.src)">
-            </div>
-            <button onclick="closeModal()" class="w-full bg-brandBlue-600 hover:bg-brandBlue-700 text-white font-bold py-3.5 rounded-xl transition shadow-md">Awesome, got it!</button>
-        </div>
     </div>
 
     <script src="js/main.js"></script>
