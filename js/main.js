@@ -204,3 +204,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// --- WHATSAPP STORE KIT PURCHASE LOGIC ---
+window.orderKitOnWhatsApp = function(kitName) {
+    // 1. Define destination contact parameters
+    const whatsappNumber = "918826821126"; 
+
+    // 2. Format a structured, professional order message layout
+    const message = `🛒 *New Store Order Inquiry* 🛒\n\n` +
+                    `📦 *Product:* ${kitName}\n` +
+                    `💬 Hi NewGen Robotics! I am interested in purchasing this kit. Please share the availability, payment options, and delivery timelines with me.`;
+
+    // 3. Package data safely for browser standard formats
+    const encodedMessage = encodeURIComponent(message);
+
+    // 4. Check device parameters to bypass mobile browser blockades (matching your form logic)
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+    if (isIOS) {
+        // Deep-link protocol to force execution within native application boundaries
+        const iosWhatsappUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodedMessage}`;
+        window.location.href = iosWhatsappUrl;
+        
+        // Fallback boundary safety in case client app application is unavailable
+        setTimeout(() => {
+            window.location.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        }, 500);
+    } else {
+        // Safe, sandboxed multi-tab execution for desktop environments and Android setups
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        window.open(whatsappUrl, '_blank');
+    }
+}
