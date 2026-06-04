@@ -262,38 +262,29 @@
             <div id="store-slider"
                 class="flex overflow-x-auto gap-4 pb-8 scrollbar-hide cursor-grab active:cursor-grabbing w-full">
 
-                <div
-                    class="bg-white rounded-3xl shadow-soft p-5 w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] flex-shrink-0 flex flex-col hover:-translate-y-2 transition duration-300">
+                <div class="bg-white rounded-3xl shadow-soft p-5 w-[85%] sm:w-[45%] md:w-[calc(25%-0.75rem)] flex-shrink-0 flex flex-col hover:-translate-y-2 transition duration-300">
+    
                     <div class="h-36 bg-gray-100 rounded-2xl mb-4 overflow-hidden relative pointer-events-none">
-                        <img src="assets/Advance kit.png" alt="Advanced Robotics Kit"
-                            class="w-full h-full object-cover">
-                        <span
-                            class="absolute top-3 right-3 bg-brandYellow-400 text-gray-900 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Bestseller</span>
+                        <img src="assets/Advance kit.png" alt="Advanced Robotics Kit" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-brandYellow-400 text-gray-900 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Bestseller</span>
                     </div>
+                    
                     <h3 class="text-lg font-bold text-gray-900 mb-1">Advanced Robotics kit</h3>
-                    <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-3">Everything needed to build your first
-                        programmable robot. Includes motors, sensors, and a controller board.</p>
-
-                    <button onclick="openModal('modal-adv-robotics')"
-                        class="text-brandBlue-600 hover:text-brandBlue-700 font-semibold text-xs mb-4 flex items-center gap-1 transition-colors w-max">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-                            </path>
-                        </svg>
+                    <p class="text-gray-500 text-xs mb-3 flex-grow line-clamp-3">Everything needed to build your first programmable robot. Includes motors, sensors, and a controller board.</p>
+                    
+                    <button onclick="openModal('modal-adv-robotics')" class="text-brandBlue-600 hover:text-brandBlue-700 font-semibold text-xs mb-4 flex items-center gap-1 transition-colors w-max">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                         View Contents
                     </button>
-
-                    <div class="flex items-center justify-between mt-auto gap-2">
+                
+                    <div class="flex items-center justify-between mt-auto gap-2 pt-2 border-t border-gray-50">
                         <span class="text-base md:text-lg font-extrabold text-brandBlue-600 whitespace-nowrap">₹3,499</span>
-                        
                         <button onclick="orderKitOnWhatsApp('Advanced Robotics Kit')" 
-                                class="bg-gray-900 hover:bg-gray-800 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl font-semibold transition text-xs md:text-sm z-10 relative whitespace-nowrap">
+                                class="bg-gray-900 hover:bg-gray-800 text-white px-3 py-2 md:px-4 md:py-2 rounded-xl font-semibold transition text-xs md:text-sm z-10 relative whitespace-nowrap">
                             Order on WhatsApp
                         </button>
                     </div>
+                    
                 </div>
             </div>
         </div>
